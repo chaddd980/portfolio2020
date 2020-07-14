@@ -109,7 +109,7 @@ p {
 }
 .description {
   color: #545454;
-  width: 45vw;
+  width: 50vw;
 }
 a {
   // color: #ffe6cc;
@@ -198,7 +198,7 @@ a {
 }
 .product-description {
   font-weight: 400;
-  width: 45vw;
+  width: 50vw;
 }
 @media only screen and (max-width: 1024px) {
   .website {
@@ -216,8 +216,53 @@ a {
   .gif {
     object-fit: cover;
   }
+  .iphone{
+    margin-right: -90px;
+  }
+  .droid{
+    margin-left: -90px;
+  }
 }
 @media only screen and (max-width: 768px) {
+  .mat-toolbar {
+    font-size: 20px !important;
+  }
+  .tool-div{
+    width: 215px;
+    margin-right: 0px;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 0 2.5vw;
+  }
+  .mat-raised-button {
+    font-size: 24px;
+  }
+  .gif {
+    object-fit: cover;
+  }
+  .meImage {
+    height: 180px;
+    width: 240px;
+    border-radius: 180px;
+    object-fit: cover;
+  }
+  p {
+    font-size: 18px;
+  }
+  .sub-title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .iphone{
+    margin-right: -90px;
+    z-index: 99;
+  }
+  .droid{
+    margin-left: -90px;
+    transform: rotate(20deg);
+    z-index: 98;
+  }
   .website {
     height: 30vh;
   }
@@ -234,7 +279,62 @@ a {
     object-fit: cover;
   }
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 480px)
+and (orientation: portrait) {
+  .mat-toolbar {
+    font-size: 20px !important;
+  }
+  .tool-div{
+    width: 215px;
+    margin-right: 0px;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 0 2.5vw;
+  }
+  .mat-raised-button {
+    font-size: 24px;
+  }
+  .gif {
+    object-fit: cover;
+  }
+  .meImage {
+    height: 180px;
+    width: 240px;
+    border-radius: 180px;
+    object-fit: cover;
+  }
+  p {
+    font-size: 18px;
+  }
+  .sub-title {
+    font-size: 22px;
+    text-align: center;
+  }
+  .iphone{
+    margin-right: -70px;
+    z-index: 99;
+  }
+  .droid{
+    margin-left: -70px;
+    transform: rotate(20deg);
+    z-index: 98;
+  }
+  .website {
+    height: 25vh;
+  }
+  .phone {
+    height: 35vh;
+  }
+  .product-description {
+    width: 95vw;
+  }
+  .description {
+    width: 95vw;
+  }
+}
+@media only screen and (max-width: 736px)
+and (orientation: landscape) {
   .mat-toolbar {
     font-size: 20px !important;
   }
