@@ -27,7 +27,9 @@ import { RibittDialogBodyComponent } from './ribitt-dialog-body/ribitt-dialog-bo
     MatSliderModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [
+    { provide: Window, useValue: window },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

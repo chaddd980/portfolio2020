@@ -1,133 +1,134 @@
-<mat-toolbar class="mat-tool-div">
+<mat-toolbar [ngClass]="scrollUp ? 'scroll-up' : (scrollDown ? 'scroll-down' : 'nothing')" role="heading" class="mat-tool-div">
   <div class="tool-div">
-    <span>
-      About
-    </span>
-    <span>
-      Work
-    </span>
-    <span>
-      Contact
-    </span>
+    <span (click)="onNavigate()"><a class="header" href="#about">About</a></span>
+    <span (click)="onNavigate()"><a class="header" href="#work">Work</a></span>
+    <span (click)="onNavigate()"><a class="header" href="#contact">Contact</a></span>
   </div>
 </mat-toolbar>
-<div class="firstSection">
-  <div class="background">
-    <img class="gif" src="assets/homegraphic4.png"/>
+<div (scroll)="onScroll($event)" class="main">
+  <div class="firstSection">
+    <div class="background">
+      <img class="gif" src="assets/homegraphic4.png"/>
+    </div>
+    <div class="greeting">
+        <h1 class="shadow">Hi, I'm <span class="me">Chadd</span></h1>
+        <h1 class="shadow">I'm a hybrid mobile and front end developer</h1>
+        <button mat-raised-button>View My Work <mat-icon>arrow_right_alt</mat-icon></button>
+    </div>
   </div>
-  <div class="greeting">
-      <h1 class="shadow">Hi, I'm <span class="me">Chadd</span></h1>
-      <h1 class="shadow">I'm a hybrid mobile and front end developer</h1>
-      <button mat-raised-button>View My Work <mat-icon>arrow_right_alt</mat-icon></button>
-  </div>
-</div>
-<div class="aboutMe">
-  <img class="meImage" src="assets/monkey.jpeg"/>
-  <h1 class="thisGuy shadow">
-    Who's this guy with a monkey on his back?
+  <a id="about" class="aboutMe">
+    <img class="meImage" src="assets/monkey.jpeg"/>
+    <h1 class="thisGuy shadow">
+      Who's this guy with a monkey on his back?
 
-  </h1>
-  <p class="description">
-    I'm a self taught front end and hybrid (Ionic) mobile developer. I am the sole front end developer for <a href="http://www.ribitt.io" target="_blank">Ribitt</a> in Toronto, Ontario.
-    I created and maintain 1 website and multiple android and ios apps for both phone and tablet.
-    I love learning on the fly and challenges that push me to get out of my comfort zone. I have a passion for creation so lets start building together!
-  </p>
-</div>
-<div class="work one">
-  <div (click)="openRibittDialog()" class="imageDiv">
-    <img class="phone iphone" src="assets/ribittiphone.png"/>
-    <img class="phone droid" src="assets/ribittdroid.png"/>
+    </h1>
+    <p class="description">
+      I'm a self taught front end and hybrid (Ionic) mobile developer. I am the sole front end developer for <a href="http://www.ribitt.io" target="_blank">Ribitt</a> in Toronto, Ontario.
+      I created and maintain 1 website and multiple android and ios apps for both phone and tablet.
+      I love learning on the fly and challenges that push me to get out of my comfort zone. I have a passion for creation so lets start building together!
+    </p>
+  </a>
+  <a id="work" class="work one">
+    <div (click)="openRibittDialog()" class="imageDiv">
+      <img class="phone iphone" src="assets/ribittiphone.png"/>
+      <img class="phone droid" src="assets/ribittdroid.png"/>
+    </div>
+    <h1 class="ribittTitle">
+      Ribitt (User App)
+    </h1>
+    <h3 class="sub-title ribittSubtitle">
+      Ionic 3 / <a href="https://apps.apple.com/ca/app/ribitt-local-rewards/id998731858" target="_blank">Ios</a> & <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tectile.ribbet&hl=en_CA">Android</a>
+    </h3>
+    <p class="product-description ribitt">
+      The flagship product at <a href="http://www.ribitt.io" class="ribittTitle">Ribitt</a>. I created the entire front end of this app from beginning to end in a couple months, with many iterations and updates over a span of over 2 and a half years.
+      Ribitt is an app that allows users to make purchases at local businesses and earn loyalty points on every transaction. The transaction works in tandem with the Ribitt Bussiness App,
+      which I also created the entire front end for.
+    </p>
+  </a>
+  <div class="work two">
+    <div class="imageDiv">
+      <!-- <img class="phone iphone" src="assets/ribittiphone.png"/> -->
+      <img class="phone" src="assets/businessDroid.png"/>
+    </div>
+    <h1 class="business">
+      Ribitt Business (Merchant App)
+    </h1>
+    <h3 class="sub-title business">
+      Ionic 3 / <a class="white" href="https://apps.apple.com/ca/app/ribitt-business/id1333198733" target="_blank">iPad</a>, <a target="_blank" class="white" href="https://play.google.com/store/apps/details?id=com.ribitt.business&hl=en_CA">Android Tablet and Android Phone</a>
+    </h3>
+    <p class="product-description business">
+      This product is used by participating merchants on the Ribitt platform. This app allows merchants to connect to users by having users scan a QR code or NFC sticker.
+      Merchants were then able to enter the transaction amount through the app and send it to the user for approval and processing. I created the entire front end for this app.
+      Firebase is used for real time connection between user and merchants and stripe is used for payment processing.
+    </p>
   </div>
-  <h1 class="ribittTitle">
-    Ribitt (User App)
-  </h1>
-  <h3 class="sub-title ribittSubtitle">
-    Ionic 3 / <a href="https://apps.apple.com/ca/app/ribitt-local-rewards/id998731858" target="_blank">Ios</a> & <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tectile.ribbet&hl=en_CA">Android</a>
-  </h3>
-  <p class="product-description ribitt">
-    The flagship product at <a href="http://www.ribitt.io" class="ribittTitle">Ribitt</a>. I created the entire front end of this app from beginning to end in a couple months, with many iterations and updates over a span of over 2 and a half years.
-    Ribitt is an app that allows users to make purchases at local businesses and earn loyalty points on every transaction. The transaction works in tandem with the Ribitt Bussiness App,
-    which I also created the entire front end for.
-  </p>
-</div>
-<div class="work two">
-  <div class="imageDiv">
-    <!-- <img class="phone iphone" src="assets/ribittiphone.png"/> -->
-    <img class="phone" src="assets/businessDroid.png"/>
+  <div class="work three">
+    <div class="imageDiv">
+      <img class="website" src="assets/businessWebsite.png"/>
+    </div>
+    <h1 class="businessTitle">
+      Ribitt Business Web App
+    </h1>
+    <h3 class="sub-title ribittSubtitle">
+      Angular 2 & Heroku / <a class="white" href="https://business.ribitt.io/" target="_blank">Web App</a>
+    </h3>
+    <p class="product-description busWebsite">
+      The Ribitt Business Web App has the same functionality as the Ribitt Business Merchant App. Some merchants have computers at their checkout terminal and preferred to use
+      that to process transactions, instead of the mobile app. It was created using Angular 2 and deployed using Heroku.
+    </p>
   </div>
-  <h1 class="business">
-    Ribitt Business (Merchant App)
-  </h1>
-  <h3 class="sub-title business">
-    Ionic 3 / <a class="white" href="https://apps.apple.com/ca/app/ribitt-business/id1333198733" target="_blank">iPad</a>, <a target="_blank" class="white" href="https://play.google.com/store/apps/details?id=com.ribitt.business&hl=en_CA">Android Tablet and Android Phone</a>
-  </h3>
-  <p class="product-description business">
-    This product is used by participating merchants on the Ribitt platform. This app allows merchants to connect to users by having users scan a QR code or NFC sticker.
-    Merchants were then able to enter the transaction amount through the app and send it to the user for approval and processing. I created the entire front end for this app.
-    Firebase is used for real time connection between user and merchants and stripe is used for payment processing.
-  </p>
-</div>
-<div class="work three">
-  <div class="imageDiv">
-    <img class="website" src="assets/businessWebsite.png"/>
+  <div class="work four">
+    <div class="imageDiv">
+      <img class="phone iphone" src="assets/iphoneHappybox.png"/>
+      <img class="phone droid" src="assets/androidHappybox.png"/>
+    </div>
+    <h1 class="business">
+      The Happy Box Inventory App
+    </h1>
+    <h3 class="sub-title business">
+      Ionic 5 & PouchDb / Ios & Android
+    </h3>
+    <p class="product-description business">
+      The Happy Box team found that there are no adequate products on the market that could
+      properly track inventory and boxes created for this unique style of ecommerce business. So in less that 72 hours i created The Happy Box Inventory App,
+      from design and database to completed product. Another week was used to refine and add other features that the team required. PouchDb and IBM's Cloudant were used for the database.
+    </p>
   </div>
-  <h1 class="businessTitle">
-    Ribitt Business Web App
-  </h1>
-  <h3 class="sub-title ribittSubtitle">
-    Angular 2 & Heroku / <a class="white" href="https://business.ribitt.io/" target="_blank">Web App</a>
-  </h3>
-  <p class="product-description busWebsite">
-    The Ribitt Business Web App has the same functionality as the Ribitt Business Merchant App. Some merchants have computers at their checkout terminal and preferred to use
-    that to process transactions, instead of the mobile app. It was created using Angular 2 and deployed using Heroku.
-  </p>
-</div>
-<div class="work four">
-  <div class="imageDiv">
-    <img class="phone iphone" src="assets/iphoneHappybox.png"/>
-    <img class="phone droid" src="assets/androidHappybox.png"/>
+  <div class="work five">
+    <div class="imageDiv">
+      <img class="phone" src="assets/businessInfo.png"/>
+    </div>
+    <h1 class="business">
+      Ribitt Business Transactions App
+    </h1>
+    <h3 class="sub-title business">
+      Ionic 4 / Ios
+    </h3>
+    <p class="product-description business">
+      The Community Manager at Ribitt needed an easy way to check recent transactions businesses on the platform without having to check reports.
+      I was given free reign to create a basic user friendly app with this functionality. I decided to test out the new Ionic 4 update at the time and use it to make this app. I worked with the Ribitt backend developer to create this app.
+      <!-- By default it shows the past 2 weeks of transactions and shows amount of transactions at each business within that time period. The date range can be changed,
+      individual businesses can be searched and businesses can be listed from high to low or low to high based on amount of transactions. -->
+    </p>
   </div>
-  <h1 class="business">
-    The Happy Box Inventory App
-  </h1>
-  <h3 class="sub-title business">
-    Ionic 5 & PouchDb / Ios & Android
-  </h3>
-  <p class="product-description business">
-    The Happy Box team found that there are no adequate products on the market that could
-    properly track inventory and boxes created for this unique style of ecommerce business. So in less that 72 hours i created The Happy Box Inventory App,
-    from design and database to completed product. Another week was used to refine and add other features that the team required. PouchDb and IBM's Cloudant were used for the database.
-  </p>
-</div>
-<div class="work five">
-  <div class="imageDiv">
-    <img class="phone" src="assets/businessInfo.png"/>
+  <div class="work six">
+    <div class="imageDiv">
+      <img class="website" src="assets/shopify.png"/>
+    </div>
+    <h1 class="business">
+      The Happy Box Shopify Ecommerce Website
+    </h1>
+    <h3 class="sub-title business">
+      Shopify & Liquid / <a class="white" href="https://thehappybox.ca/" target="_blank">Ecommerce</a>
+    </h3>
+    <p class="product-description business">
+      I did not create the shopify website but I acted as a shopify expert to add functionality to the shopify theme by editing the theme code which is in shopify's proprietary Liquid language.
+      I also added unique design changes by editing the html and css of the shopify theme.
+    </p>
   </div>
-  <h1 class="business">
-    Ribitt Business Transactions App
-  </h1>
-  <h3 class="sub-title business">
-    Ionic 4 / Ios
-  </h3>
-  <p class="product-description business">
-    The Community Manager at Ribitt needed an easy way to check recent transactions businesses on the platform without having to check reports.
-    I was given free reign to create a basic user friendly app with this functionality. I decided to test out the new Ionic 4 update at the time and use it to make this app. I worked with the Ribitt backend developer to create this app.
-    <!-- By default it shows the past 2 weeks of transactions and shows amount of transactions at each business within that time period. The date range can be changed,
-    individual businesses can be searched and businesses can be listed from high to low or low to high based on amount of transactions. -->
-  </p>
-</div>
-<div class="work six">
-  <div class="imageDiv">
-    <img class="website" src="assets/shopify.png"/>
-  </div>
-  <h1 class="business">
-    The Happy Box Shopify Ecommerce Website
-  </h1>
-  <h3 class="sub-title business">
-    Shopify & Liquid / <a class="white" href="https://thehappybox.ca/" target="_blank">Ecommerce</a>
-  </h3>
-  <p class="product-description business">
-    I did not create the shopify website but I acted as a shopify expert to add functionality to the shopify theme by editing the theme code which is in shopify's proprietary Liquid language.
-    I also added unique design changes by editing the html and css of the shopify theme.
-  </p>
+  <a class="work" id="contact">
+    <div>
+      contact
+    </div>
+  </a>
 </div>
