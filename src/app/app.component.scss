@@ -78,6 +78,10 @@
   position: absolute;
   top: 0;
 }
+.greeting a {
+  display: flex;
+  align-items: center;
+}
 h1 {
   font-size: 34px;
   font-family: Garamond, Helvetica;
@@ -127,7 +131,7 @@ h1 {
   text-align: center;
   // color: #ffdab3;
   color: #bb671c;
-  margin: 4vh 0;
+  margin: 4vh 2vw;
 }
 p {
   font-family: Garamond, Helvetica;
@@ -181,6 +185,41 @@ a {
 }
 #contact {
   top: 950vh;
+  width: 100%;
+  padding: 15vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  text-align: center;
+}
+#contact div {
+  width: 850px;
+}
+#contact button {
+  background: #FCE9D7;
+  color: #bb671c;
+  font-size: 34px;
+  font-weight: 300;
+  padding: 20px 35px;
+  border-radius: 10px;
+  margin-top: 4vh;
+}
+#contact p{
+  color: black;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+#contact h1{
+  font-size: 44px;
+  margin-bottom: 4vh;
+  margin-right: 0;
+  font-weight: 400;
+}
+#contact h3{
+  font-size: 34px;
+  line-height: 1.1;
 }
 .imageDiv{
   display: flex;
@@ -309,9 +348,44 @@ a {
   .gif {
     object-fit: cover;
   }
+  #contact {
+    width: 100%;
+    padding: 15vh 0;
+  }
+  #contact div {
+    width: 80vw;
+  }
+  #contact button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 4vh;
+    width: 80vw;
+  }
+  #contact p{
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  #contact h1{
+    font-size: 40px;
+    margin-bottom: 4vh;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #contact h3{
+    font-size: 30px;
+    line-height: 1.1;
+  }
+  #contact .mat-icon{
+    font-size: 24px;
+    height: 28px;
+    width: 24px;
+  }
 }
-@media only screen and (max-width: 480px)
-and (orientation: portrait) {
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
   .mat-toolbar {
     font-size: 20px !important;
   }
@@ -355,13 +429,45 @@ and (orientation: portrait) {
     height: 25vh;
   }
   .phone {
-    height: 35vh;
+    height: 33vh;
   }
   .product-description {
     width: 95vw;
   }
   .description {
     width: 95vw;
+  }
+  #contact {
+    width: 100%;
+    padding: 15vh 0;
+  }
+  #contact div {
+    width: 80vw;
+  }
+  #contact button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 4vh;
+    width: 80vw;
+  }
+  #contact p{
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  #contact h1{
+    font-size: 30px;
+    margin-bottom: 4vh;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #contact h3{
+    font-size: 22px;
+    line-height: 1.1;
+  }
+  #contact .mat-icon{
+    font-size: 20px;
+    height: 24px;
+    width: 20px;
   }
 }
 @media only screen and (max-width: 736px)
@@ -417,6 +523,38 @@ and (orientation: landscape) {
   .description {
     width: 95vw;
   }
+  #contact {
+    width: 100%;
+    padding: 15vh 0;
+  }
+  #contact div {
+    width: 80vw;
+  }
+  #contact button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 4vh;
+    width: 80vw;
+  }
+  #contact p{
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  #contact h1{
+    font-size: 34px;
+    margin-bottom: 4vh;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #contact h3{
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  #contact .mat-icon{
+    font-size: 20px;
+    height: 24px;
+    width: 20px;
+  }
 }
 @media only screen and (max-width: 670px)
 and (orientation: landscape) {
@@ -471,6 +609,340 @@ and (orientation: landscape) {
   .description {
     width: 95vw;
   }
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .mat-toolbar {
+      font-size: 20px !important;
+    }
+    .tool-div{
+      width: 215px;
+      margin-right: 0px;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0 2.5vw;
+    }
+    .mat-raised-button {
+      font-size: 20px;
+    }
+    .greeting .mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+    .gif {
+      object-fit: cover;
+    }
+    .meImage {
+      height: 105px;
+      width: 140px;
+      border-radius: 180px;
+      object-fit: cover;
+    }
+    p {
+      font-size: 15px;
+    }
+    .sub-title {
+      font-size: 18px;
+      text-align: center;
+    }
+    .iphone{
+      margin-right: -50px;
+      z-index: 99;
+    }
+    .droid{
+      margin-left: -50px;
+      transform: rotate(20deg);
+      z-index: 98;
+    }
+    .website {
+      height: 20vh;
+    }
+    .phone {
+      height: 25vh;
+    }
+    .product-description {
+      width: 95vw;
+    }
+    .description {
+      width: 95vw;
+    }
+    #contact {
+      width: 100%;
+      padding: 15vh 0;
+      top: 660vh !important;
+    }
+    #contact div {
+      width: 80vw;
+    }
+    #contact button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-top: 4vh;
+      width: 80vw;
+    }
+    #contact p{
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+    #contact h1{
+      font-size: 30px;
+      margin-bottom: 4vh;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    #contact h3{
+      font-size: 22px;
+      line-height: 1.1;
+    }
+    #contact .mat-icon{
+      font-size: 20px;
+      height: 24px;
+      width: 20px;
+    }
+    .aboutMe {
+      height: 80vh !important;
+    }
+    .work {
+      height: 80vh !important;
+    }
+    .one {
+      top: 180vh !important;
+    }
+    .two {
+      top: 260vh !important;
+    }
+    .three {
+      top: 340vh !important;
+    }
+    .four {
+      top: 420vh !important;
+    }
+    .five {
+      top: 500vh !important;
+    }
+    .six {
+      top: 580vh !important;
+    }
+}
+
+@media only screen
+  and (max-device-width: 823px)
+  and (orientation: landscape) {
+    .mat-toolbar {
+      font-size: 20px !important;
+    }
+    .tool-div{
+      width: 215px;
+      margin-right: 0px;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 2.5vw;
+    }
+    .mat-raised-button {
+      font-size: 22px;
+    }
+    .gif {
+      object-fit: cover;
+    }
+    .meImage {
+      height: 105px;
+      width: 140px;
+      border-radius: 180px;
+      object-fit: cover;
+    }
+    p {
+      font-size: 16px;
+    }
+    .sub-title {
+      font-size: 19px;
+      text-align: center;
+    }
+    .iphone{
+      margin-right: -30px;
+      z-index: 99;
+    }
+    .droid{
+      margin-left: -30px;
+      transform: rotate(20deg);
+      z-index: 98;
+    }
+    .website {
+      height: 45vh;
+    }
+    .phone {
+      height: 45vh;
+    }
+    .product-description {
+      width: 95vw;
+    }
+    .description {
+      width: 95vw;
+    }
+    #contact {
+      width: 100%;
+      padding: 15vh 0;
+    }
+    #contact div {
+      width: 80vw;
+    }
+    #contact button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin-top: 4vh;
+      width: 80vw;
+    }
+    #contact p{
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+    #contact h1{
+      font-size: 30px;
+      margin-bottom: 4vh;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    #contact h3{
+      font-size: 22px;
+      line-height: 1.1;
+    }
+    #contact .mat-icon{
+      font-size: 20px;
+      height: 24px;
+      width: 20px;
+    }
+}
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  #contact {
+    width: 100%;
+    padding: 15vh 0;
+    top: 800vh
+  }
+  .aboutMe {
+    height: 100vh;
+  }
+  .work {
+    height: 100vh
+  }
+  .one {
+    top: 200vh;
+  }
+  .two {
+    top: 300vh;
+  }
+  .three {
+    top: 400vh;
+  }
+  .four {
+    top: 500vh;
+  }
+  .five {
+    top: 600vh;
+  }
+  .six {
+    top: 700vh;
+  }
+}
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    #contact {
+      width: 100%;
+      padding: 15vh 0;
+      top: 720vh
+    }
+    .aboutMe {
+      height: 90vh;
+    }
+    .work {
+      height: 90vh
+    }
+    .one {
+      top: 190vh;
+    }
+    .two {
+      top: 280vh;
+    }
+    .three {
+      top: 370vh;
+    }
+    .four {
+      top: 460vh;
+    }
+    .five {
+      top: 540vh;
+    }
+    .six {
+      top: 630vh;
+    }
+}
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #contact {
+      width: 100%;
+      padding: 15vh 0;
+      top: 750vh
+    }
+    .aboutMe {
+      height: 95vh;
+    }
+    .work {
+      height: 95vh
+    }
+    .one {
+      top: 180vh;
+    }
+    .two {
+      top: 275vh;
+    }
+    .three {
+      top: 370vh;
+    }
+    .four {
+      top: 465vh;
+    }
+    .five {
+      top: 560vh;
+    }
+    .six {
+      top: 655vh;
+    }
+}
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .phone{
+      height: 39vh;
+    }
+}
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .phone{
+      height: 38vh;
+    }
+    .website {
+      height: 32vh;
+    }
 }
 .business {
   color: white;

@@ -13,7 +13,7 @@
     <div class="greeting">
         <h1 class="shadow">Hi, I'm <span class="me">Chadd</span></h1>
         <h1 class="shadow">I'm a hybrid mobile and front end developer</h1>
-        <button mat-raised-button>View My Work <mat-icon>arrow_right_alt</mat-icon></button>
+        <button mat-raised-button><a class="header" href="#work">View My Work <mat-icon>arrow_right_alt</mat-icon></a></button>
     </div>
   </div>
   <a id="about" class="aboutMe">
@@ -58,7 +58,7 @@
     </h3>
     <p class="product-description business">
       This product is used by participating merchants on the Ribitt platform. This app allows merchants to connect to users by having users scan a QR code or NFC sticker.
-      Merchants were then able to enter the transaction amount through the app and send it to the user for approval and processing. I created the entire front end for this app.
+      Merchants are then able to enter the transaction amount through the app and send it to the user for approval and processing. I created the entire front end for this app.
       Firebase is used for real time connection between user and merchants and stripe is used for payment processing.
     </p>
   </div>
@@ -79,23 +79,6 @@
   </div>
   <div class="work four">
     <div class="imageDiv">
-      <img class="phone iphone" src="assets/iphoneHappybox.png"/>
-      <img class="phone droid" src="assets/androidHappybox.png"/>
-    </div>
-    <h1 class="business">
-      The Happy Box Inventory App
-    </h1>
-    <h3 class="sub-title business">
-      Ionic 5 & PouchDb / Ios & Android
-    </h3>
-    <p class="product-description business">
-      The Happy Box team found that there are no adequate products on the market that could
-      properly track inventory and boxes created for this unique style of ecommerce business. So in less that 72 hours i created The Happy Box Inventory App,
-      from design and database to completed product. Another week was used to refine and add other features that the team required. PouchDb and IBM's Cloudant were used for the database.
-    </p>
-  </div>
-  <div class="work five">
-    <div class="imageDiv">
       <img class="phone" src="assets/businessInfo.png"/>
     </div>
     <h1 class="business">
@@ -109,6 +92,23 @@
       I was given free reign to create a basic user friendly app with this functionality. I decided to test out the new Ionic 4 update at the time and use it to make this app. I worked with the Ribitt backend developer to create this app.
       <!-- By default it shows the past 2 weeks of transactions and shows amount of transactions at each business within that time period. The date range can be changed,
       individual businesses can be searched and businesses can be listed from high to low or low to high based on amount of transactions. -->
+    </p>
+  </div>
+  <div class="work five">
+    <div class="imageDiv">
+      <img class="phone iphone" src="assets/iphoneHappybox.png"/>
+      <img class="phone droid" src="assets/androidHappybox.png"/>
+    </div>
+    <h1 class="business">
+      The Happy Box Inventory App
+    </h1>
+    <h3 class="sub-title business">
+      Ionic 5 & PouchDb / Ios & Android
+    </h3>
+    <p class="product-description business">
+      The Happy Box team found that there are no adequate products on the market that could
+      properly track inventory and boxes created for this unique style of ecommerce business. So in less that 72 hours i created The Happy Box Inventory App,
+      from design and database to completed product. Another week was used to refine and add other features that the team required. PouchDb and IBM's Cloudant were used for the database.
     </p>
   </div>
   <div class="work six">
@@ -126,9 +126,25 @@
       I also added unique design changes by editing the html and css of the shopify theme.
     </p>
   </div>
-  <a class="work" id="contact">
+  <a id="contact">
     <div>
-      contact
+      <h1>Like what you see?</h1>
+      <h3 class="sub-title">I'm currently open to offers and freelance work.</h3>
+      <p>If you have a position that you think i can fill or you have a project that you would like to get started and think I have the skills to help, then lets talk.</p>
+      <button mat-flat-button><mat-icon> email</mat-icon> Message</button>
     </div>
   </a>
 </div>
+
+<!-- <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/YOUR_EMAIL_HERE" method="post">
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+    <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+  </fieldset>
+  <input type="submit" value="Submit">
+</form> -->
