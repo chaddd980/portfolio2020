@@ -10,3 +10,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 		scroll-behavior: auto;
 	}
 }
+.mat-horizontal-stepper-header .mat-step-icon {
+  display: none !important;
+}
+.mat-horizontal-stepper-content {
+  display: flex;
+  justify-content: center;
+}
+.mat-dialog-container {
+  padding: 0 !important;
+}

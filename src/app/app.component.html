@@ -29,7 +29,7 @@
     </p>
   </a>
   <a id="work" class="work one">
-    <div (click)="openRibittDialog()" class="imageDiv">
+    <div (click)="openRibittDialog('ribittMobile')" class="imageDiv">
       <img class="phone iphone" src="assets/ribittiphone.png"/>
       <img class="phone droid" src="assets/ribittdroid.png"/>
     </div>
@@ -46,9 +46,10 @@
     </p>
   </a>
   <div class="work two">
-    <div class="imageDiv">
+    <div (click)="openRibittDialog('ribittBusiness')" class="imageDiv">
       <!-- <img class="phone iphone" src="assets/ribittiphone.png"/> -->
       <img class="phone" src="assets/businessDroid.png"/>
+      <img class="andTab" src="assets/andTab2.png"/>
     </div>
     <h1 class="business">
       Ribitt Business (Merchant App)
@@ -63,14 +64,14 @@
     </p>
   </div>
   <div class="work three">
-    <div class="imageDiv">
+    <div (click)="openRibittDialog('webBusiness')" class="imageDiv">
       <img class="website" src="assets/businessWebsite.png"/>
     </div>
     <h1 class="businessTitle">
       Ribitt Business Web App
     </h1>
     <h3 class="sub-title ribittSubtitle">
-      Angular 2 & Heroku / <a class="white" href="https://business.ribitt.io/" target="_blank">Web App</a>
+      Angular 2 & Heroku / <a class="white" href="https://ribittbusiness.herokuapp.com/#/dashboard" target="_blank">Web App</a>
     </h3>
     <p class="product-description busWebsite">
       The Ribitt Business Web App has the same functionality as the Ribitt Business Merchant App. Some merchants have computers at their checkout terminal and preferred to use
@@ -78,7 +79,7 @@
     </p>
   </div>
   <div class="work four">
-    <div class="imageDiv">
+    <div (click)="openRibittDialog('businessStats')" class="imageDiv">
       <img class="phone" src="assets/businessInfo.png"/>
     </div>
     <h1 class="business">
@@ -95,7 +96,7 @@
     </p>
   </div>
   <div class="work five">
-    <div class="imageDiv">
+    <div (click)="openRibittDialog('happyBox')" class="imageDiv">
       <img class="phone iphone" src="assets/iphoneHappybox.png"/>
       <img class="phone droid" src="assets/androidHappybox.png"/>
     </div>
@@ -112,7 +113,7 @@
     </p>
   </div>
   <div class="work six">
-    <div class="imageDiv">
+    <div class="imageDivShop">
       <img class="website" src="assets/shopify.png"/>
     </div>
     <h1 class="business">

@@ -32,6 +32,12 @@
   // transition: transform 0.4s;
   transition: top 0.3s linear;
 }
+// .mat-horizontal-stepper-header .mat-step-icon {
+//   display: none !important;
+// }
+// .mat-dialog-container {
+//   padding: 0 !important;
+// }
 .tool-div{
   display: flex;
   flex-direction: row;
@@ -173,11 +179,11 @@ a {
 }
 .four {
   top: 575vh;
-  background: #FCBA22;
+  background: #3880ff;
 }
 .five {
   top: 700vh;
-  background: #3880ff;
+  background: #FCBA22;
 }
 .six {
   top: 825vh;
@@ -231,8 +237,24 @@ a {
   flex-direction: row;
   cursor: pointer;
 }
+.imageDivShop{
+  display: flex;
+  flex-direction: row;
+}
+.two .imageDiv {
+  position: relative;
+}
+.two .phone {
+  margin-left: -20vw;
+  z-index: 10;
+}
 .phone {
   height: 60vh;
+}
+.andTab {
+  height: 60vh;
+  position: absolute;
+  transform: rotate(-27deg);
 }
 .iphone{
   margin-right: -130px;
@@ -308,7 +330,7 @@ a {
   }
   h1 {
     // font-size: 24px;
-    margin: 0 2.5vw;
+    margin: 0 2.5vw 2vh;
   }
   .mat-raised-button {
     font-size: 24px;
@@ -668,6 +690,12 @@ and (orientation: landscape) {
       height: 20vh;
     }
     .phone {
+      height: 25vh;
+    }
+    .two .phone {
+      margin-left: -26vw;
+    }
+    .andTab {
       height: 25vh;
     }
     .product-description {

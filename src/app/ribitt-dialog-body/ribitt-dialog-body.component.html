@@ -1,1 +1,64 @@
-<p>ribitt-dialog-body works!</p>
+<div *ngIf="type == 'ribittMobile'">
+  <mat-horizontal-stepper>
+    <mat-step>
+      <ng-template *ngIf="!mobile" matStepLabel>Point of Purchase Demo</ng-template>
+      <ng-template *ngIf="mobile" matStepLabel>Purchase Demo</ng-template>
+      <video class="normal" controls>
+        <source src="assets/ribittMobile.mov" />
+      </video>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>App Demo</ng-template>
+      <video class="screenRecord" controls>
+        <source src="assets/ribittmobileuse.mp4" />
+      </video>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<div *ngIf="type == 'ribittBusiness'">
+  <mat-horizontal-stepper>
+    <mat-step>
+      <ng-template *ngIf="!mobile" matStepLabel>Point of Purchase Demo</ng-template>
+      <ng-template *ngIf="mobile" matStepLabel>Purchase Demo</ng-template>
+      <video class="normal" controls>
+        <source src="assets/ribittMobile.mov" />
+      </video>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>App Demo</ng-template>
+      <video class="normal" controls>
+        <source src="assets/businessApp.MP4" />
+      </video>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<div *ngIf="type == 'webBusiness'">
+  <mat-horizontal-stepper>
+    <mat-step>
+      <ng-template matStepLabel>Demo</ng-template>
+      <video class="normal" controls>
+        <source src="assets/businessWeb.mp4" />
+      </video>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<div *ngIf="type == 'businessStats'">
+  <mat-horizontal-stepper>
+    <mat-step>
+      <ng-template matStepLabel>Demo</ng-template>
+      <video class="normal" controls>
+        <source src="assets/businessstatscrop.mp4" />
+      </video>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<div *ngIf="type == 'happyBox'">
+  <mat-horizontal-stepper>
+    <mat-step>
+      <ng-template matStepLabel>Demo</ng-template>
+      <video class="normal" controls>
+        <source src="assets/happyboxCrop.mp4" />
+      </video>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

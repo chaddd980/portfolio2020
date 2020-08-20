@@ -17,12 +17,16 @@ export class AppComponent {
 
   constructor(public dialog: MatDialog, private window: Window) {}
 
-  public openRibittDialog() {
-    // const dialogRef = this.dialog.open(RibittDialogBodyComponent);
+  public openRibittDialog(type: any) {
+    const dialogRef = this.dialog.open(RibittDialogBodyComponent, {
+      data: {
+        info: type,
+      },
+    });
 
-    // dialogRef.afterClosed().subscribe((result) => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
   public onNavigate() {
